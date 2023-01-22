@@ -1,0 +1,22 @@
+{
+  "name": "@example/minimal",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@auth/core": "^0.2.5",
+    "astro": "^1.9.0",
+    "pocketbase": "^0.10.1"
+  },
+  "devDependencies": {
+    "cookie": "^0.5.0",
+    "set-cookie-parser": "^2.5.1"
+  }
+}
