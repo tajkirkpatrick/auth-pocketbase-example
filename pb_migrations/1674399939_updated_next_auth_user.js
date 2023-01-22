@@ -1,19 +1,21 @@
 migrate((db) => {
   const dao = new Dao(db)
-  const collection = dao.findCollectionByNameOrId("yjyfrfgfy5e1f5p")
+  const collection = dao.findCollectionByNameOrId("qhn8ngzgaw4k3x1")
 
   collection.listRule = ""
   collection.viewRule = ""
+  collection.createRule = ""
   collection.updateRule = ""
   collection.deleteRule = ""
 
   return dao.saveCollection(collection)
 }, (db) => {
   const dao = new Dao(db)
-  const collection = dao.findCollectionByNameOrId("yjyfrfgfy5e1f5p")
+  const collection = dao.findCollectionByNameOrId("qhn8ngzgaw4k3x1")
 
   collection.listRule = null
   collection.viewRule = null
+  collection.createRule = null
   collection.updateRule = null
   collection.deleteRule = null
 

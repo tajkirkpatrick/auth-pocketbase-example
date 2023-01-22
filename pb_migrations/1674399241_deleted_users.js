@@ -6,8 +6,8 @@ migrate((db) => {
 }, (db) => {
   const collection = new Collection({
     "id": "_pb_users_auth_",
-    "created": "2023-01-18 17:58:00.144Z",
-    "updated": "2023-01-19 20:31:06.727Z",
+    "created": "2023-01-22 14:53:40.837Z",
+    "updated": "2023-01-22 14:53:40.839Z",
     "name": "users",
     "type": "auth",
     "system": false,
@@ -47,14 +47,14 @@ migrate((db) => {
         }
       }
     ],
-    "listRule": null,
-    "viewRule": null,
-    "createRule": null,
-    "updateRule": null,
-    "deleteRule": null,
+    "listRule": "id = @request.auth.id",
+    "viewRule": "id = @request.auth.id",
+    "createRule": "",
+    "updateRule": "id = @request.auth.id",
+    "deleteRule": "id = @request.auth.id",
     "options": {
-      "allowEmailAuth": false,
-      "allowOAuth2Auth": false,
+      "allowEmailAuth": true,
+      "allowOAuth2Auth": true,
       "allowUsernameAuth": true,
       "exceptEmailDomains": null,
       "manageRule": null,

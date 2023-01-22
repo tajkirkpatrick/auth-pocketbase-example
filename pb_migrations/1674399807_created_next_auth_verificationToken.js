@@ -1,16 +1,16 @@
 migrate((db) => {
   const collection = new Collection({
-    "id": "phabfede1df4ins",
-    "created": "2023-01-18 19:49:30.219Z",
-    "updated": "2023-01-18 19:49:30.219Z",
-    "name": "next_auth_users",
+    "id": "b1muh5lapcicift",
+    "created": "2023-01-22 15:03:27.861Z",
+    "updated": "2023-01-22 15:03:27.861Z",
+    "name": "next_auth_verificationToken",
     "type": "base",
     "system": false,
     "schema": [
       {
         "system": false,
-        "id": "sqq2jrrw",
-        "name": "name",
+        "id": "uvlrbxmy",
+        "name": "identifier",
         "type": "text",
         "required": false,
         "unique": false,
@@ -22,8 +22,8 @@ migrate((db) => {
       },
       {
         "system": false,
-        "id": "pqhltwmb",
-        "name": "image",
+        "id": "v0mjzelg",
+        "name": "token",
         "type": "text",
         "required": false,
         "unique": false,
@@ -35,27 +35,14 @@ migrate((db) => {
       },
       {
         "system": false,
-        "id": "zsmzzihw",
-        "name": "email",
-        "type": "email",
+        "id": "t1halyno",
+        "name": "expires",
+        "type": "date",
         "required": false,
         "unique": false,
         "options": {
-          "exceptDomains": null,
-          "onlyDomains": null
-        }
-      },
-      {
-        "system": false,
-        "id": "p2gdio0v",
-        "name": "email_verified",
-        "type": "text",
-        "required": false,
-        "unique": false,
-        "options": {
-          "min": null,
-          "max": null,
-          "pattern": ""
+          "min": "",
+          "max": ""
         }
       }
     ],
@@ -70,7 +57,7 @@ migrate((db) => {
   return Dao(db).saveCollection(collection);
 }, (db) => {
   const dao = new Dao(db);
-  const collection = dao.findCollectionByNameOrId("phabfede1df4ins");
+  const collection = dao.findCollectionByNameOrId("b1muh5lapcicift");
 
   return dao.deleteCollection(collection);
 })
